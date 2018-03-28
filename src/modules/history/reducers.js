@@ -6,7 +6,7 @@ import update from 'lodash/fp/update'
 
 import { ADD_TO_HISTORY, CLEAR_HISTORY, TOGGLE_HISTORY, } from './constants'
 
-const initialHistoryState = {
+export const initialHistoryState = {
   operations: [],
   enabled: false,
 }

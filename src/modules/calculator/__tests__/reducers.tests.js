@@ -5,7 +5,7 @@ import {
 } from '../actions'
 import { OPERATORS } from '../../../constants'
 
-describe('stack add action', () => {
+describe('Calculator reducers', () => {
   test('should return the initial state', () => {
     expect(reducer(undefined, { type: '@INIT' })).toEqual(initialCalculatorState)
   })
