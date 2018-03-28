@@ -30,6 +30,7 @@ const theme = {
     secondary: '#EBEDF2',
     white: '#FFF',
     
+    danger: '#FF0000',
     light: 'rgba(0, 0, 0, 0.3)',
     grey: 'rgba(0, 0, 0, 0.5)',
     dark: 'rgba(0, 0, 0, 0.7)',
