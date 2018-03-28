@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import { applyMiddleware, compose, createStore } from 'redux'
+import thunk from 'redux-thunk'
 
 import createReducer from './reducers'
 
@@ -8,6 +9,7 @@ export default function configureStore(initialState = {}) {
   
   const middlewares = [
     // App middlewares
+    thunk
   ]
   
   const enhancers = [applyMiddleware(...middlewares)]
