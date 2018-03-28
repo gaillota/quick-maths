@@ -39,6 +39,12 @@ const digitHandler = (digit) => (dispatch, getState) => {
   const state = getState()
   const currentOperator = makeCurrentOperatorSelector()(state)
   const computed = makeComputedSelector()(state)
+  const lastEntity = makeLastEntitySelector()(state)
+  
+  // Prevent multiple 0
+  if (digit === 0 && lastEntity === 0) {
+    return
+  }
   
   if (computed) {
     dispatch(resetStack())
