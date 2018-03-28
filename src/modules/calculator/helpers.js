@@ -35,4 +35,5 @@ export const transformOperators = map(entity => {
   return entity
 })
 
+// Try to work something here, leaving this for now
 export const reduceStack = join('')

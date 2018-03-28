@@ -99,6 +99,11 @@ const equalHandler = () => (dispatch, getState) => {
   const state = getState()
   const stack = makeStackSelector()(state)
   const history = makeEnableSelector()(state)
+  const computed = makeComputedSelector()(state)
+  
+  if (computed) {
+    return
+  }
   
   if (history) {
     dispatch(addToHistory(stack))

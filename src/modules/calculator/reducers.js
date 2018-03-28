@@ -14,6 +14,7 @@ import {
   STACK_ADD,
   STACK_RESET,
 } from './constants'
+import { injectState } from '../../utils/helpers'
 
 const initialCalculatorState = {
   stack: [],
@@ -45,7 +46,4 @@ function calculatorReducer(action) {
   }
 }
 
-// Just trying something new here
-const injectState = (reducer) => (state = initialCalculatorState, action) => reducer(action)(state)
-
-export default injectState(calculatorReducer)
+export default injectState(calculatorReducer, initialCalculatorState)
