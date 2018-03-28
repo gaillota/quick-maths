@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Result = styled.div`
-  font-size: 1.25rem;
+  font-size: 3rem;
 `
 
 export default Result

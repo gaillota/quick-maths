@@ -9,6 +9,8 @@ import { isOperator, reduceStack, transformOperators } from './helpers'
 
 const stateSelector = get('calculator')
 
+const actionFromPropsSelector = (_, props) => props.action
+
 const makeStackSelector = () => createSelector(
   stateSelector,
   get('stack'),
@@ -65,6 +67,12 @@ const makeResultDisplaySelector = () => createSelector(
   },
 )
 
+const makeIsKeyActiveSelector = () => createSelector(
+  actionFromPropsSelector,
+  makeCurrentOperatorSelector(),
+  (action, operator) => action === operator,
+)
+
 export {
   makeLastEntitySelector,
   makeCommaSelector,
@@ -73,4 +81,5 @@ export {
   makeResultDisplaySelector,
   makeComputedSelector,
   makeCurrentOperatorSelector,
+  makeIsKeyActiveSelector,
 }

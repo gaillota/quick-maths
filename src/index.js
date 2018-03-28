@@ -25,8 +25,8 @@ const theme = {
     },
   },
   colors: {
-    background: '#EBEDF2',
-    primary: '#2F3139',
+    background: '#f9f4fb',
+    primary: '#0063d6',
     secondary: '#EBEDF2',
     white: '#FFF',
     
@@ -34,6 +34,18 @@ const theme = {
     light: 'rgba(0, 0, 0, 0.3)',
     grey: 'rgba(0, 0, 0, 0.5)',
     dark: 'rgba(0, 0, 0, 0.7)',
+    
+    screen: {
+      border: '#FF0000',
+      background: '#ff9b08',
+    },
+    pad: {
+      key: {
+        background: '#ff897a',
+        activeBackground: 'violet',
+        color: 'white'
+      }
+    }
   },
 }
 

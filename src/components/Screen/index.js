@@ -5,10 +5,9 @@ const Screen = styled.div`
   flex-flow: column nowrap;
   align-items: flex-end;
   
-  background: violet;
-  border: 5px solid blue;
+  background: ${props => props.theme.colors.screen.background};
+  border: 5px solid ${props => props.theme.colors.screen.border};
   padding: 3px 10px;
-  font-size: 1.5rem;
   margin-bottom: 10px;
 `
 

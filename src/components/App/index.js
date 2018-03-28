@@ -5,7 +5,6 @@ import History from '../../modules/history/containers/History'
 
 import Layout from '../Layout'
 import Header from '../Header'
-import Title from '../Title'
 import Container from '../Container'
 import Section from '../Section'
 import CalculatorContainer from '../CalculatorContainer'
@@ -17,9 +16,7 @@ class App extends Component {
     return (
       <Layout>
         <Header>
-          <Title>
-            Simple calculator
-          </Title>
+          Simple calculator
         </Header>
         <Container>
           <Section>

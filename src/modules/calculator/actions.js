@@ -93,6 +93,7 @@ const commaHandler = (key) => (dispatch, getState) => {
 const clearHandler = () => (dispatch) => {
   dispatch(resetStack())
   dispatch(resetComma())
+  dispatch(resetCurrentOperator())
 }
 
 const equalHandler = () => (dispatch, getState) => {

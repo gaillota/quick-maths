@@ -10,7 +10,7 @@ const Pad = () => (
   <Grid columns={4} rows={5} gap='0.5em'>
     {
       padConfig.map(({ key, action, ...rest }, index) => (
-        <Cell {...rest} key={index}>
+        <Cell key={index} {...rest}>
           <Key action={action}>
             {key}
           </Key>
