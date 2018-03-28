@@ -1,5 +1,13 @@
 import { ACTIONS, OPERATORS } from '../../constants'
 
+export const mapOperatorToJs = {
+  [OPERATORS.ADD]: '+',
+  [OPERATORS.SUBTRACT]: '-',
+  [OPERATORS.MULTIPLY]: '*',
+  [OPERATORS.DIVIDE]: '/',
+  [ACTIONS.COMMA]: '.'
+}
+
 export const padConfig = [
   {
     key: '+',
