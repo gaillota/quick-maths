@@ -27,12 +27,5 @@ export default {
       border: '#FF0000',
       background: '#ff9b08',
     },
-    pad: {
-      key: {
-        background: '#ff897a',
-        activeBackground: 'violet',
-        color: 'white',
-      },
-    },
   },
 }

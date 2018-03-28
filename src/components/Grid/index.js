@@ -8,7 +8,7 @@ const Grid = styled.div`
     grid-gap: ${props => props.gap};
     justify-items: stretch;
     align-items: stretch;
-    height: 400px;
+    height: 50vh;
 `
 
 Grid.propTypes = {

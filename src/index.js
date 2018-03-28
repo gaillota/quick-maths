@@ -7,6 +7,7 @@ import configureStore from './store/configureStore'
 import registerServiceWorker from './registerServiceWorker'
 import App from './components/App'
 
+import '@fortawesome/fontawesome';
 import './index.css'
 import theme from './theme'
 

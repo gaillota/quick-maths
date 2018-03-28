@@ -60,7 +60,7 @@ const makeResultDisplaySelector = () => createSelector(
     
     if (computed) {
       // eslint-disable-next-line
-      return eval(string) // Oh well
+      return parseFloat(eval(string).toFixed(5)) // Oh well
     }
     
     return flow(takeRightWhile(e => !isOperator(e)), transformOperators, reduceStack)(stack)

@@ -5,9 +5,8 @@ const Screen = styled.div`
   flex-flow: column nowrap;
   align-items: flex-end;
   
-  background: ${props => props.theme.colors.primary};
-  border: 5px solid ${props => props.theme.colors.secondary};
-  padding: 3px 10px;
+  background: ${props => props.theme.colors.secondary};
+  padding: 8px 15px;
   margin-bottom: 5px;
   color: white;
 `

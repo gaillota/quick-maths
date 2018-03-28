@@ -6,11 +6,12 @@ import { reduceStack, transformOperators } from '../../modules/calculator/helper
 
 const Wrapper = styled.div`
   margin: 5px 0;
+  font-size: 1.5rem;
 `
 
 const HistoryListItem = ({ operation }) => (
   <Wrapper>
-    {operation}
+    - {operation}
   </Wrapper>
 )
 

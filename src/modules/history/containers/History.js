@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
+import Icon from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/fontawesome-free-solid'
 
 import { bindActionsToDispatch } from '../../../utils/helpers'
 import { clearHistory, toggleHistory } from '../actions'
@@ -18,7 +20,9 @@ const History = ({ enabled, history, toggleHistory, clearHistory }) => (
       <label htmlFor="history">
         <input type="checkbox" id="history" onChange={(event) => toggleHistory(event.target.checked)}/> Enable history
       </label>
-      <Button onClick={clearHistory}>X</Button>
+      <Button onClick={clearHistory}>
+        <Icon icon={faTrash}/>
+      </Button>
     </Actions>
     {enabled && (
       <React.Fragment>

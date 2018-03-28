@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Grid from '../../../components/Grid/index'
-import Cell from '../../../components/Cell/index'
+import Grid from '../../../components/Grid'
+import Cell from '../../../components/Cell'
 import Key from '../containers/Key'
 
 import { padConfig } from '../config'
