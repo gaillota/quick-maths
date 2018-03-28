@@ -22,17 +22,17 @@ import { addToHistory } from '../history/actions'
 import { makeEnableSelector } from '../history/selectors'
 
 // Sync actions
-const addToStack = createAction(STACK_ADD)
-const resetStack = createAction(STACK_RESET)
+export const addToStack = createAction(STACK_ADD)
+export const resetStack = createAction(STACK_RESET)
 
-const setComma = createAction(SET_COMMA)
-const resetComma = createAction(RESET_COMMA)
+export const setComma = createAction(SET_COMMA)
+export const resetComma = createAction(RESET_COMMA)
 
-const setCurrentOperator = createAction(SET_CURRENT_OPERATOR)
-const resetCurrentOperator = createAction(RESET_CURRENT_OPERATOR)
+export const setCurrentOperator = createAction(SET_CURRENT_OPERATOR)
+export const resetCurrentOperator = createAction(RESET_CURRENT_OPERATOR)
 
-const compute = createAction(COMPUTE)
-const resetCompute = createAction(RESET_COMPUTE)
+export const compute = createAction(COMPUTE)
+export const resetCompute = createAction(RESET_COMPUTE)
 
 // Async actions (requires redux-thunk)
 const digitHandler = (digit) => (dispatch, getState) => {

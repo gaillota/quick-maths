@@ -16,7 +16,7 @@ import {
 } from './constants'
 import { injectState } from '../../utils/helpers'
 
-const initialCalculatorState = {
+export const initialCalculatorState = {
   stack: [],
   comma: false,
   computed: false,

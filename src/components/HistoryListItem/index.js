@@ -14,11 +14,11 @@ const HistoryListItem = ({ operation }) => (
   </Wrapper>
 )
 
-const operationToString = (Component) => ({ operation }) => {
+const operationToString = (Component) => ({ operation, ...rest }) => {
   const operationString = flow(transformOperators, reduceStack)(operation)
   
   return (
-    <Component operation={operationString}/>
+    <Component operation={operationString} {...rest} />
   )
 }
 

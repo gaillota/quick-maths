@@ -7,7 +7,7 @@ import Key from '../containers/Key'
 import { padConfig } from '../config'
 
 const Pad = () => (
-  <Grid columns={4} rows={5} gap='0.5em'>
+  <Grid columns={4} rows={5} gap='0.1em'>
     {
       padConfig.map(({ key, action, ...rest }, index) => (
         <Cell key={index} {...rest}>
