@@ -1,4 +1,4 @@
-# Quick mafs
+# Quick maths
 
 Simple calculator for everyday computation
 
