@@ -3,9 +3,9 @@ import get from 'lodash/fp/get'
 import last from 'lodash/fp/last'
 import flow from 'lodash/fp/flow'
 import takeRightWhile from 'lodash/fp/takeRightWhile'
-import join from 'lodash/fp/join'
+import toString from 'lodash/fp/toString'
 
-import { cleanOperation, isOperator, reduceOperation } from './helpers'
+import { isOperator, reduceStack, transformOperators } from './helpers'
 
 const stateSelector = get('calculator')
 
@@ -39,28 +39,29 @@ const makeOperationToStringSelector = () => createSelector(
   (stack) => {
     // Prevent empty string for display
     if (!stack.length) {
-      return '0'
+      return 0
     }
     
-    return flow(cleanOperation, reduceOperation())(stack)
+    return flow(transformOperators, reduceStack, toString)(stack)
   },
 )
 
 const makeResultDisplaySelector = () => createSelector(
   makeStackSelector(),
-  makeOperationToStringSelector(),
   makeComputedSelector(),
-  (stack, string, computed) => {
+  makeOperationToStringSelector(),
+  (stack, computed, string) => {
     // Prevent empty string for display
     if (!stack.length) {
-      return '0'
+      return 0
     }
     
     if (computed) {
+      // eslint-disable-next-line
       return eval(string) // Oh well
     }
-
-    return flow(takeRightWhile(isOperator), cleanOperation, join(''))(stack)
+    
+    return flow(takeRightWhile(e => !isOperator(e)), transformOperators, reduceStack)(stack)
   },
 )
 
