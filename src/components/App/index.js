@@ -7,9 +7,8 @@ import Layout from '../Layout'
 import Header from '../Header'
 import Container from '../Container'
 import Section from '../Section'
-import CalculatorContainer from '../CalculatorContainer'
-import HistoryContainer from '../HistoryContainer'
 import Row from '../Row'
+import Column from '../Column'
 
 class App extends Component {
   render() {
@@ -21,12 +20,12 @@ class App extends Component {
         <Container>
           <Section>
             <Row>
-              <CalculatorContainer>
+              <Column>
                 <Calculator/>
-              </CalculatorContainer>
-              <HistoryContainer>
+              </Column>
+              <Column width='40%'>
                 <History/>
-              </HistoryContainer>
+              </Column>
             </Row>
           </Section>
         </Container>
